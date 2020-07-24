@@ -8,5 +8,7 @@ Exploratory Data Analysis (EDA) of Singapore weather in the first half of 2020. 
 
 The datasets were obtained from http://www.weather.gov.sg/climate-historical-daily/
 
-## EDA Results
+## EDA
 ![Alt text](/assets/img/weather_eda_result.png?raw=true "Weather EDA result")
+![Alt text](/assets/img/wind_rain_scatter.png?raw=true "Wind Rain Scatter Plot")
+![Alt text](/assets/img/corr_matrix.png?raw=true "Correlation matrix")
