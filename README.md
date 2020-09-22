@@ -20,10 +20,11 @@ Random Forest Regressor - MSE: 0.8685, R2 score: 0.1797
 
 ## Prediction of whether it rained using temperature and wind speed
 Logistic regression - Accuracy: 74%
+<br/>
 ![Alt text](/assets/img/logreg_decision_boundary.png?raw=true "Decision boundary")
 ![Alt text](/assets/img/roc.png?raw=true "ROC")
 
-## API for mean temperature prediction (Build with FastAPI)
+## API for prediction (Build with FastAPI)
 ### Requirements
 Python 3.6+
 
@@ -41,7 +42,8 @@ INFO:     Started server process [28722]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 ```
-Submit a POST request to http://127.0.0.1:8000/predict 
+### To predict temperatue:
+Submit a POST request to http://127.0.0.1:8000/predict/temp 
 
 Sample request:
 ```
@@ -60,5 +62,25 @@ Sample response:
     "daily_rainfall_total": 30.4,
     "ml_model": "lr",
     "predicted_mean_temperature": 27.4
+}
+```
+
+### To predict whether it rained:
+Submit a POST request to http://127.0.0.1:8000/predict/rain
+
+Sample request:
+```
+{
+	"mean_temp": 29.5,
+    "mean_wind_speed": 4.0
+}
+```
+
+Sample response:
+```
+{
+    "mean_temp": 29.5,
+    "mean_wind_speed": 4.0,
+    "predicted_rain": false
 }
 ```
