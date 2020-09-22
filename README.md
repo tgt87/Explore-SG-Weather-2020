@@ -1,5 +1,5 @@
 # Explore-SG-Weather-2020
-Exploratory Data Analysis (EDA) of Singapore weather in the first half of 2020. <br/>
+Exploratory Data Analysis (EDA) of 2020 Singapore weather. <br/>
 4 different areas were chosen as to represent the different regions of Sinagpore to perform the analysis
 * Ang Mo Kio
 * Changi
@@ -9,14 +9,19 @@ Exploratory Data Analysis (EDA) of Singapore weather in the first half of 2020. 
 The datasets were obtained from http://www.weather.gov.sg/climate-historical-daily/
 
 ## EDA
-![Alt text](/assets/img/weather_eda_result.png?raw=true "Weather EDA result")
+![Alt text](/assets/img/weather.png?raw=true "Weather line plot")
 ![Alt text](/assets/img/wind_rain_scatter.png?raw=true "Wind Rain Scatter Plot")
 ![Alt text](/assets/img/corr_matrix.png?raw=true "Correlation matrix")
 
-## Prediction of mean temperature using mean wind speed and daily rainfall total
-Linear Regression - MSE: 0.7202, R2 score: 0.0847
+## Prediction of temperature using wind speed and rainfall
+Linear Regression - MSE: 0.8541, R2 score: 0.1934
 <br/>
-Random Forest Regressor - MSE: 0.7727, R2 score: 0.0180
+Random Forest Regressor - MSE: 0.8685, R2 score: 0.1797
+
+## Prediction of whether it rained using temperature and wind speed
+Logistic regression - Accuracy: 74%
+![Alt text](/assets/img/logreg_decision_boundary.png?raw=true "Decision boundary")
+![Alt text](/assets/img/roc.png?raw=true "ROC")
 
 ## API for mean temperature prediction (Build with FastAPI)
 ### Requirements
