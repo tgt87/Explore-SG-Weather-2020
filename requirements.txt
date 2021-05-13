@@ -4,4 +4,4 @@ matplotlib==3.1.3
 scikit-learn==0.22.1
 seaborn==0.10.0
 fastapi==0.60.1
-pydantic==1.6.1
+pydantic==1.6.2
